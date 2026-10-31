@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fader Blend</title>
+  <link rel="stylesheet" href="../../theme/theme.css">
+  <link rel="stylesheet" href="../../theme/mini_topnav.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <div id="app" class="fb-app">
+    <nav class="mini-topnav" aria-label="Mini navigation">
+      <a class="mini-topnav-back" href="../../hub/index.html">← Hub</a>
+      <span class="mini-topnav-title">Fader Blend</span>
+    </nav>
+    <div class="mini-main">
+    <header class="fb-hud" aria-label="Mix status">
+      <div class="fb-hud-block" id="hudTarget">
+        <span class="fb-hud-label">Target mix</span>
+        <span class="fb-hud-value" id="targetMixText">—</span>
+      </div>
+      <div class="fb-hud-block" id="hudYour">
+        <span class="fb-hud-label">Your mix</span>
+        <span class="fb-hud-value" id="yourMixText">—</span>
+      </div>
+      <div class="fb-hud-block" id="hudScore">
+        <span class="fb-hud-label">Error / Best</span>
+        <span class="fb-hud-value" id="errorBestText">— / —</span>
+      </div>
+      <div class="fb-hud-block" id="hudSession">
+        <span class="fb-hud-label">Streak / Set</span>
+        <span class="fb-hud-value" id="sessionText">0 · —</span>
+      </div>
+    </header>
+
+    <div class="fb-toolbar">
+      <button type="button" class="fb-chip active" id="btnModeSingle" data-mode="single">Single</button>
+      <button type="button" class="fb-chip" id="btnModeSet" data-mode="set">5-set</button>
+      <label class="fb-select-wrap">
+        <span>Grade</span>
+        <select id="selGrade">
+          <option value="pro">Pro</option>
+          <option value="standard" selected>Standard</option>
+          <option value="training">Training</option>
+        </select>
+      </label>
+    </div>
+    <div class="fb-presets" aria-label="Mix presets">
+      <button type="button" class="fb-chip" data-preset="even">Even</button>
+      <button type="button" class="fb-chip" data-preset="bass">Bass heavy</button>
+      <button type="button" class="fb-chip" data-preset="treble">Treble heavy</button>
+    </div>
+
+    <main class="fb-stage" id="stage" aria-label="Fader stage">
+      <p class="fb-round-label" id="roundLabel">Round ready</p>
+      <div class="fb-chart" id="mixChart" aria-hidden="true">
+        <div class="fb-chart-row" data-track="bass">
+          <span class="fb-track-name">Bass</span>
+          <div class="fb-bar-track">
+            <div class="fb-bar fb-bar-target" id="barTargetBass"></div>
+            <div class="fb-bar fb-bar-live" id="barLiveBass"></div>
+          </div>
+        </div>
+        <div class="fb-chart-row" data-track="mid">
+          <span class="fb-track-name">Mid</span>
+          <div class="fb-bar-track">
+            <div class="fb-bar fb-bar-target" id="barTargetMid"></div>
+            <div class="fb-bar fb-bar-live" id="barLiveMid"></div>
+          </div>
+        </div>
+        <div class="fb-chart-row" data-track="treble">
+          <span class="fb-track-name">Treble</span>
+          <div class="fb-bar-track">
+            <div class="fb-bar fb-bar-target" id="barTargetTreble"></div>
+            <div class="fb-bar fb-bar-live" id="barLiveTreble"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fb-sliders">
+        <label class="fb-slider-row">
+          <span>Bass</span>
+          <input type="range" id="sliderBass" min="0" max="100" value="33">
+          <output id="outBass">33</output>
+        </label>
+        <label class="fb-slider-row">
+          <span>Mid</span>
+          <input type="range" id="sliderMid" min="0" max="100" value="33">
+          <output id="outMid">33</output>
+        </label>
+        <label class="fb-slider-row">
+          <span>Treble</span>
+          <input type="range" id="sliderTreble" min="0" max="100" value="34">
+          <output id="outTreble">34</output>
+        </label>
+      </div>
+
+      <p class="fb-feedback" id="feedback" role="status" aria-live="polite"></p>
+    </main>
+    </div>
+
+    <footer class="fb-skill" id="skillBar">
+      <button type="button" class="fb-btn fb-btn-secondary" id="btnReset">Reset sliders</button>
+      <button type="button" class="fb-btn fb-btn-primary" id="btnSubmit">Submit mix</button>
+    </footer>
+
+    <div class="fb-result hidden" id="resultPanel" aria-hidden="true">
+      <p class="fb-result-title" id="resultTitle">Result</p>
+      <p class="fb-result-detail" id="resultDetail"></p>
+      <button type="button" class="fb-btn fb-btn-primary fb-btn-retry" id="btnRetry">Retry</button>
+      <button type="button" class="fb-btn fb-btn-secondary hidden" id="btnNextRound">Next mix</button>
+      <a class="fb-hub-link" href="../../hub/index.html">Back to Hub</a>
+    </div>
+
+    <div class="fb-tutorial" id="tutorial" aria-hidden="false">
+      <div class="fb-tutorial-card">
+        <h1>Fader Blend</h1>
+        <p>Match the target mix on three faders, then tap <strong>Submit mix</strong>. Lower error beats your Best.</p>
+        <p class="fb-tutorial-hint">Slide Bass, Mid, and Treble like thread tension on a loom.</p>
+        <button type="button" class="fb-btn fb-btn-primary" id="btnTutorialSkip">Skip Tutorial</button>
+      </div>
+    </div>
+  </div>
+  <script src="../../theme/mini_topnav.js" defer></script>
+  <script src="game.js" defer></script>
+</body>
+</html>

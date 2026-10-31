@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Silo Flow</title>
+  <link rel="stylesheet" href="../../theme/theme.css">
+  <link rel="stylesheet" href="../../theme/mini_topnav.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <div class="sl-app" id="app">
+    <nav class="mini-topnav" aria-label="Mini navigation">
+      <a class="mini-topnav-back" href="../../hub/index.html">← Hub</a>
+      <span class="mini-topnav-title">Silo Flow</span>
+    </nav>
+    <div class="mini-main">
+    <header class="sl-hud" aria-label="Silo status">
+      <div class="sl-hud-block">
+        <span class="sl-label">Stock</span>
+        <span class="sl-value" id="hudStock">50%</span>
+      </div>
+      <div class="sl-hud-block">
+        <span class="sl-label">Days</span>
+        <span class="sl-value" id="hudDays">0</span>
+      </div>
+      <div class="sl-hud-block">
+        <span class="sl-label">Best days</span>
+        <span class="sl-value" id="hudBest">—</span>
+      </div>
+    </header>
+
+    <main class="sl-stage" aria-label="Silo simulation">
+      <p class="sl-phase" id="phaseText">Day 1 — balance inflow and discharge</p>
+      <div class="sl-silo-wrap">
+        <div class="sl-silo" aria-hidden="true">
+          <div class="sl-silo-fill" id="siloFill"></div>
+          <div class="sl-silo-band sl-band-low" id="bandLow"></div>
+          <div class="sl-silo-band sl-band-high" id="bandHigh"></div>
+        </div>
+        <ul class="sl-flow-stats">
+          <li>Inflow: <span id="statIn">—</span></li>
+          <li>Outflow: <span id="statOut">—</span></li>
+          <li>Demand: <span id="statDemand">—</span></li>
+          <li>Timer: <span id="statTimer">—</span></li>
+        </ul>
+      </div>
+      <p class="sl-feedback" id="feedback" role="status" aria-live="polite"></p>
+    </main>
+    </div>
+
+    <footer class="sl-skill">
+      <button type="button" class="sl-btn sl-btn-secondary" id="btnToggle">Toggle discharge</button>
+      <button type="button" class="sl-btn sl-btn-primary" id="btnSlowOut">Fine bleed</button>
+      <button type="button" class="sl-btn sl-btn-secondary" id="btnThrottle">Throttle intake</button>
+    </footer>
+
+    <div class="sl-result hidden" id="resultPanel" aria-hidden="true">
+      <p class="sl-result-title" id="resultTitle">Shift ended</p>
+      <p class="sl-result-detail" id="resultDetail"></p>
+      <button type="button" class="sl-btn sl-btn-primary sl-btn-retry" id="btnRetry">Retry</button>
+      <a class="sl-hub-link" href="../../hub/index.html">Back to Hub</a>
+    </div>
+
+    <div class="sl-tutorial" id="tutorial">
+      <div class="sl-tutorial-card">
+        <h1>Silo Flow</h1>
+        <p>Grain keeps arriving. Use <strong>Toggle discharge</strong> to release bulk outflow, or <strong>Fine bleed</strong> for a steady trickle.</p>
+        <p class="sl-tutorial-note">Overflow above the top band or empty silo fails the shift. Meet demand or the line stops.</p>
+        <button type="button" class="sl-btn sl-btn-primary" id="btnSkipTutorial">Skip Tutorial</button>
+      </div>
+    </div>
+  </div>
+  <script src="../../theme/mini_topnav.js" defer></script>
+  <script src="game.js" defer></script>
+</body>
+</html>

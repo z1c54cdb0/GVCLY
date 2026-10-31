@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Loft Hub</title>
+  <link rel="stylesheet" href="../theme/theme.css">
+  <link rel="stylesheet" href="sp650f5Hub.css">
+</head>
+<body>
+  <div class="hb-app">
+    <header class="hb-top">
+      <div class="hb-brand">
+        <h1 class="hb-title">Spindle Thread Loft</h1>
+        <p class="hb-sub">Pick a bench game</p>
+      </div>
+      <nav class="hb-utility" aria-label="Hub links">
+        <a class="hb-link" href="../shared-progress/index.html">Progress</a>
+        <a class="hb-link" href="../settings/index.html">Settings</a>
+      </nav>
+    </header>
+
+    <section class="hb-progress-strip" id="progressStrip" aria-label="Shared progress">
+      <div class="hb-progress-item">
+        <span class="hb-progress-label">Saved games</span>
+        <span class="hb-progress-value" id="progSaved">0/4</span>
+      </div>
+      <div class="hb-progress-item">
+        <span class="hb-progress-label">Loft streaks</span>
+        <span class="hb-progress-value" id="progStreaks">—</span>
+      </div>
+      <div class="hb-progress-item">
+        <span class="hb-progress-label">Puzzle stars</span>
+        <span class="hb-progress-value" id="progStars">—</span>
+      </div>
+      <div class="hb-progress-item">
+        <span class="hb-progress-label">Silo career</span>
+        <span class="hb-progress-value" id="progCareer">—</span>
+      </div>
+    </section>
+
+    <section class="hb-spotlight" id="spotlight" aria-label="Loft highlights"></section>
+
+    <main class="hb-list" id="cardList" aria-label="Game cards"></main>
+  </div>
+  <script src="sp650f5Hub.js" defer></script>
+</body>
+</html>

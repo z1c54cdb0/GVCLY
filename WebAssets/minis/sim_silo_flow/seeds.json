@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "days": [
+    { "id": 0, "inflow": 4.2, "outOpen": 6.5, "outClosed": 0.4, "demand": 2.8, "durationSec": 28 },
+    { "id": 1, "inflow": 3.6, "outOpen": 5.8, "outClosed": 0.3, "demand": 2.5, "durationSec": 30 },
+    { "id": 2, "inflow": 5.0, "outOpen": 7.2, "outClosed": 0.5, "demand": 3.2, "durationSec": 26 },
+    { "id": 3, "inflow": 3.2, "outOpen": 5.2, "outClosed": 0.2, "demand": 2.2, "durationSec": 32 },
+    { "id": 4, "inflow": 4.8, "outOpen": 6.8, "outClosed": 0.4, "demand": 3.0, "durationSec": 27 },
+    { "id": 5, "inflow": 3.9, "outOpen": 6.0, "outClosed": 0.35, "demand": 2.6, "durationSec": 29 },
+    { "id": 6, "inflow": 5.4, "outOpen": 7.5, "outClosed": 0.55, "demand": 3.4, "durationSec": 25 },
+    { "id": 7, "inflow": 3.4, "outOpen": 5.4, "outClosed": 0.25, "demand": 2.3, "durationSec": 31 },
+    { "id": 8, "inflow": 4.5, "outOpen": 6.6, "outClosed": 0.45, "demand": 2.9, "durationSec": 28 },
+    { "id": 9, "inflow": 3.7, "outOpen": 5.9, "outClosed": 0.3, "demand": 2.4, "durationSec": 30 },
+    { "id": 10, "inflow": 5.2, "outOpen": 7.0, "outClosed": 0.5, "demand": 3.1, "durationSec": 26 },
+    { "id": 11, "inflow": 3.3, "outOpen": 5.3, "outClosed": 0.2, "demand": 2.1, "durationSec": 33 },
+    { "id": 12, "inflow": 4.6, "outOpen": 6.7, "outClosed": 0.42, "demand": 2.85, "durationSec": 28 },
+    { "id": 13, "inflow": 3.8, "outOpen": 6.1, "outClosed": 0.32, "demand": 2.55, "durationSec": 29 },
+    { "id": 14, "inflow": 5.1, "outOpen": 7.3, "outClosed": 0.48, "demand": 3.15, "durationSec": 27 },
+    { "id": 15, "inflow": 3.5, "outOpen": 5.5, "outClosed": 0.28, "demand": 2.35, "durationSec": 30 },
+    { "id": 16, "inflow": 4.4, "outOpen": 6.4, "outClosed": 0.38, "demand": 2.75, "durationSec": 28 },
+    { "id": 17, "inflow": 4.9, "outOpen": 6.9, "outClosed": 0.46, "demand": 3.05, "durationSec": 27 },
+    { "id": 18, "inflow": 3.1, "outOpen": 5.1, "outClosed": 0.22, "demand": 2.0, "durationSec": 34 },
+    { "id": 19, "inflow": 4.0, "outOpen": 6.2, "outClosed": 0.36, "demand": 2.65, "durationSec": 29 },
+    { "id": 20, "inflow": 5.3, "outOpen": 7.4, "outClosed": 0.52, "demand": 3.25, "durationSec": 26 },
+    { "id": 21, "inflow": 3.65, "outOpen": 5.7, "outClosed": 0.3, "demand": 2.45, "durationSec": 31 },
+    { "id": 22, "inflow": 4.7, "outOpen": 6.75, "outClosed": 0.44, "demand": 2.95, "durationSec": 28 },
+    { "id": 23, "inflow": 4.1, "outOpen": 6.3, "outClosed": 0.34, "demand": 2.7, "durationSec": 30 }
+  ]
+}

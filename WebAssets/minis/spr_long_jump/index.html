@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Long Jump Board</title>
+  <link rel="stylesheet" href="../../theme/theme.css">
+  <link rel="stylesheet" href="../../theme/mini_topnav.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <div class="lj-app" id="app">
+    <nav class="mini-topnav" aria-label="Mini navigation">
+      <a class="mini-topnav-back" href="../../hub/index.html">← Hub</a>
+      <span class="mini-topnav-title">Long Jump Board</span>
+    </nav>
+    <div class="mini-main">
+    <header class="lj-hud" aria-label="Jump stats">
+      <div class="lj-hud-block">
+        <span class="lj-label">Distance</span>
+        <span class="lj-value" id="hudDistance">—</span>
+      </div>
+      <div class="lj-hud-block">
+        <span class="lj-label">Foul</span>
+        <span class="lj-value" id="hudFoul">Clear</span>
+      </div>
+      <div class="lj-hud-block">
+        <span class="lj-label">Best</span>
+        <span class="lj-value" id="hudBest">—</span>
+      </div>
+      <div class="lj-hud-block">
+        <span class="lj-label">Wind / Attempt</span>
+        <span class="lj-value" id="hudWind">—</span>
+      </div>
+    </header>
+    <div class="lj-toolbar">
+      <button type="button" class="lj-chip active" id="btnModeSingle" data-mode="single">Single</button>
+      <button type="button" class="lj-chip" id="btnModeMeet" data-mode="meet">3-jump meet</button>
+    </div>
+
+    <main class="lj-stage" aria-label="Runway">
+      <p class="lj-phase" id="phaseText">Approach run</p>
+      <canvas id="trackCanvas" class="lj-canvas" width="360" height="200" aria-label="Track view"></canvas>
+      <p class="lj-feedback" id="feedback" role="status" aria-live="polite"></p>
+    </main>
+    </div>
+
+    <footer class="lj-skill">
+      <button type="button" class="lj-btn lj-btn-secondary" id="btnTap" disabled>Tap stride</button>
+      <button type="button" class="lj-btn lj-btn-primary" id="btnJump" disabled>Jump</button>
+    </footer>
+
+    <div class="lj-result hidden" id="resultPanel" aria-hidden="true">
+      <p class="lj-result-title" id="resultTitle">Jump result</p>
+      <p class="lj-result-detail" id="resultDetail"></p>
+      <button type="button" class="lj-btn lj-btn-primary lj-btn-retry" id="btnRetry">Retry</button>
+      <button type="button" class="lj-btn lj-btn-secondary hidden" id="btnNextAttempt">Next attempt</button>
+      <a class="lj-hub-link" href="../../hub/index.html">Back to Hub</a>
+    </div>
+
+    <div class="lj-tutorial" id="tutorial">
+      <div class="lj-tutorial-card">
+        <h1>Long Jump Board</h1>
+        <p>Tap <strong>Tap stride</strong> on each rhythm cue during the approach. At the board, hit <strong>Jump</strong> inside the green window.</p>
+        <p class="lj-tutorial-note">Too many missed strides or a late board takeoff counts as a foul.</p>
+        <button type="button" class="lj-btn lj-btn-primary" id="btnSkipTutorial">Skip Tutorial</button>
+      </div>
+    </div>
+  </div>
+  <script src="../../theme/mini_topnav.js" defer></script>
+  <script src="game.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "runs": [
+    { "id": 0, "beatsMs": [520, 500, 480, 460, 440], "boardAtMs": 2600, "windowMs": 180 },
+    { "id": 1, "beatsMs": [480, 470, 460, 450, 440], "boardAtMs": 2400, "windowMs": 170 },
+    { "id": 2, "beatsMs": [560, 540, 520, 500, 480], "boardAtMs": 2800, "windowMs": 190 },
+    { "id": 3, "beatsMs": [440, 430, 420, 410, 400], "boardAtMs": 2200, "windowMs": 160 },
+    { "id": 4, "beatsMs": [500, 490, 480, 470, 460], "boardAtMs": 2500, "windowMs": 175 },
+    { "id": 5, "beatsMs": [600, 580, 560, 540, 520], "boardAtMs": 3000, "windowMs": 200 },
+    { "id": 6, "beatsMs": [460, 450, 440, 430, 420], "boardAtMs": 2300, "windowMs": 165 },
+    { "id": 7, "beatsMs": [510, 500, 490, 480, 470], "boardAtMs": 2550, "windowMs": 180 },
+    { "id": 8, "beatsMs": [530, 520, 510, 500, 490], "boardAtMs": 2650, "windowMs": 185 },
+    { "id": 9, "beatsMs": [470, 460, 450, 440, 430], "boardAtMs": 2350, "windowMs": 170 },
+    { "id": 10, "beatsMs": [490, 480, 470, 460, 450], "boardAtMs": 2450, "windowMs": 175 },
+    { "id": 11, "beatsMs": [550, 530, 510, 490, 470], "boardAtMs": 2750, "windowMs": 190 },
+    { "id": 12, "beatsMs": [430, 420, 410, 400, 390], "boardAtMs": 2150, "windowMs": 155 },
+    { "id": 13, "beatsMs": [520, 510, 500, 490, 480], "boardAtMs": 2600, "windowMs": 180 },
+    { "id": 14, "beatsMs": [580, 560, 540, 520, 500], "boardAtMs": 2900, "windowMs": 195 },
+    { "id": 15, "beatsMs": [450, 440, 430, 420, 410], "boardAtMs": 2250, "windowMs": 165 },
+    { "id": 16, "beatsMs": [505, 495, 485, 475, 465], "boardAtMs": 2525, "windowMs": 178 },
+    { "id": 17, "beatsMs": [540, 520, 500, 480, 460], "boardAtMs": 2700, "windowMs": 188 },
+    { "id": 18, "beatsMs": [465, 455, 445, 435, 425], "boardAtMs": 2325, "windowMs": 168 },
+    { "id": 19, "beatsMs": [495, 485, 475, 465, 455], "boardAtMs": 2475, "windowMs": 172 },
+    { "id": 20, "beatsMs": [515, 505, 495, 485, 475], "boardAtMs": 2575, "windowMs": 182 },
+    { "id": 21, "beatsMs": [475, 465, 455, 445, 435], "boardAtMs": 2375, "windowMs": 170 },
+    { "id": 22, "beatsMs": [525, 515, 505, 495, 485], "boardAtMs": 2625, "windowMs": 183 },
+    { "id": 23, "beatsMs": [485, 475, 465, 455, 445], "boardAtMs": 2425, "windowMs": 174 }
+  ]
+}

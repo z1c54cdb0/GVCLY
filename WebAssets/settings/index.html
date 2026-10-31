@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Settings</title>
+  <link rel="stylesheet" href="../theme/theme.css">
+  <link rel="stylesheet" href="ad316Settings.css">
+</head>
+<body>
+  <div class="st-app">
+    <header class="st-header">
+      <a class="st-back" href="../hub/index.html">← Hub</a>
+      <h1 class="st-title">Settings</h1>
+    </header>
+
+    <main class="st-main">
+      <section class="st-panel" id="panelAbout" aria-labelledby="aboutHeading">
+        <h2 id="aboutHeading">About</h2>
+        <p><strong>Spindle Thread Loft</strong> is a casual game hub themed around a textile loft — rhythm faders, runway jumps, crate puzzles, and silo shifts.</p>
+        <p>Theme story: <code>spindle_thread_loft</code>. All gameplay runs offline in your browser with local saves only.</p>
+      </section>
+
+      <section class="st-panel" id="panelPrivacy" aria-labelledby="privacyHeading">
+        <h2 id="privacyHeading">Privacy</h2>
+        <p>No account is required. Progress and preferences are stored with <code>localStorage</code> on this device under keys prefixed with your app scope id.</p>
+        <p>We do not collect gameplay analytics in this web bundle. Clearing site data removes your saves.</p>
+        <p>Contact: support@example.com (replace with your App Store support URL before release).</p>
+      </section>
+
+      <section class="st-panel">
+        <h2>Data</h2>
+        <p class="st-feedback" id="settingsFeedback" role="status" aria-live="polite"></p>
+        <button type="button" class="st-btn st-btn-danger" id="btnClear">Clear local saves</button>
+      </section>
+    </main>
+  </div>
+  <script src="ad316Settings.js" defer></script>
+</body>
+</html>

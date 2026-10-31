@@ -1,0 +1,56 @@
+.ly-app {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--app-theme-background);
+  color: var(--app-theme-textPrimary);
+}
+
+.ly-stage {
+  max-width: 360px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ly-kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--app-theme-textMuted);
+}
+
+.ly-title {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+.ly-copy {
+  margin: 0;
+  color: var(--app-theme-textSecondary);
+  line-height: 1.45;
+}
+
+.ly-feedback {
+  min-height: 1.2rem;
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--app-theme-warning);
+}
+
+.ly-btn {
+  margin-top: 8px;
+  min-height: 48px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--app-theme-accent);
+  color: var(--app-theme-surface);
+}

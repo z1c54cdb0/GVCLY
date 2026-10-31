@@ -1,0 +1,251 @@
+.sl-app {
+  display: flex;
+  flex-direction: column;
+  background: var(--app-theme-background);
+  color: var(--app-theme-textPrimary);
+}
+
+.sl-hud {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 12px;
+  background: var(--app-theme-hudPanel);
+  border-bottom: 1px solid var(--app-theme-separator);
+}
+
+.sl-hud-block {
+  background: var(--app-theme-surface);
+  border-radius: 8px;
+  padding: 8px;
+  min-height: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sl-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--app-theme-textMuted);
+}
+
+.sl-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.sl-stage {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sl-phase {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--app-theme-textSecondary);
+}
+
+.sl-silo-wrap {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.sl-silo {
+  position: relative;
+  width: 72px;
+  min-height: 0;
+  height: min(180px, 28dvh);
+  border-radius: 12px 12px 8px 8px;
+  border: 2px solid var(--app-theme-separator);
+  background: var(--app-theme-surfaceElevated);
+  overflow: hidden;
+}
+
+.sl-silo-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: var(--app-theme-accent);
+  transition: height 0.15s linear;
+}
+
+.sl-silo-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  pointer-events: none;
+}
+
+.sl-band-low {
+  bottom: 15%;
+  background: var(--app-theme-danger);
+  opacity: 0.85;
+}
+
+.sl-band-high {
+  bottom: 85%;
+  background: var(--app-theme-warning);
+  opacity: 0.85;
+}
+
+.sl-flow-stats {
+  flex: 1;
+  margin: 0;
+  padding: 12px;
+  list-style: none;
+  background: var(--app-theme-surface);
+  border-radius: 12px;
+  border: 1px solid var(--app-theme-separator);
+  font-size: 0.88rem;
+  color: var(--app-theme-textSecondary);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sl-flow-stats span {
+  color: var(--app-theme-textPrimary);
+  font-weight: 600;
+}
+
+.sl-feedback {
+  min-height: 1.2rem;
+  margin: 0;
+  text-align: center;
+  color: var(--app-theme-warning);
+}
+
+.sl-feedback.ok {
+  color: var(--app-theme-success);
+}
+
+.sl-skill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  background: var(--app-theme-surface);
+  border-top: 1px solid var(--app-theme-separator);
+}
+
+.sl-btn {
+  flex: 1;
+  min-height: 44px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sl-btn-primary {
+  background: var(--app-theme-accent);
+  color: var(--app-theme-surface);
+}
+
+.sl-hub-link {
+  width: 100%;
+  text-align: center;
+  margin-top: 4px;
+  color: var(--app-theme-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sl-btn-secondary {
+  background: var(--app-theme-hudPanel);
+  color: var(--app-theme-textPrimary);
+  border: 1px solid var(--app-theme-separator);
+}
+
+.sl-btn-secondary.active {
+  outline: 2px solid var(--app-theme-accent);
+}
+
+.sl-btn-primary.active {
+  outline: 2px solid var(--app-theme-accentSecondary);
+}
+
+.sl-result {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  background: var(--app-theme-overlay);
+  z-index: 20;
+}
+
+.sl-result.hidden {
+  display: none;
+}
+
+.sl-result-title,
+.sl-result-detail {
+  margin: 0;
+  padding: 12px 20px;
+  background: var(--app-theme-surface);
+  border-radius: 12px;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+}
+
+.sl-result-detail {
+  color: var(--app-theme-textSecondary);
+}
+
+.sl-btn-retry {
+  min-width: 160px;
+}
+
+.sl-tutorial {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--app-theme-overlay);
+  z-index: 30;
+}
+
+.sl-tutorial.hidden {
+  display: none;
+}
+
+.sl-tutorial-card {
+  background: var(--app-theme-surface);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 360px;
+  border: 1px solid var(--app-theme-separator);
+}
+
+.sl-tutorial-card h1 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+
+.sl-tutorial-card p {
+  margin: 0 0 12px;
+  line-height: 1.45;
+  color: var(--app-theme-textSecondary);
+}
+
+.sl-tutorial-note {
+  font-size: 0.86rem;
+  color: var(--app-theme-textMuted);
+}

@@ -1,0 +1,116 @@
+:root {
+  --mini-topnav-block: calc(60px + env(safe-area-inset-top, 0px));
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.fb-app,
+.lj-app,
+.sf-app,
+.sl-app {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-top: var(--mini-topnav-block);
+}
+
+.mini-main {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}
+
+.fb-stage,
+.lj-stage,
+.sf-stage,
+.sl-stage {
+  min-height: min(55vh, 100%);
+}
+
+.mini-topnav,
+.fb-skill,
+.lj-skill,
+.sf-skill,
+.sl-skill {
+  flex-shrink: 0;
+}
+
+.mini-topnav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: calc(8px + env(safe-area-inset-top, 0px)) 12px 8px;
+  background: var(--app-theme-surface);
+  border-bottom: 1px solid var(--app-theme-separator);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 50;
+  transform: translateZ(0);
+}
+
+.mini-topnav-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 36px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--app-theme-separator);
+  background: var(--app-theme-hudPanel);
+  color: var(--app-theme-accent);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.mini-topnav-back:active {
+  opacity: 0.85;
+}
+
+.mini-topnav-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--app-theme-textPrimary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lj-result .lj-btn,
+.fb-result .fb-btn,
+.sf-result .sf-btn,
+.sl-result .sl-btn {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 320px;
+}
+
+.lj-result,
+.fb-result,
+.sf-result,
+.sl-result {
+  z-index: 45;
+}

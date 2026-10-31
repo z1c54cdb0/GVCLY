@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Freeze Sokoban</title>
+  <link rel="stylesheet" href="../../theme/theme.css">
+  <link rel="stylesheet" href="../../theme/mini_topnav.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <div class="sf-app" id="app">
+    <nav class="mini-topnav" aria-label="Mini navigation">
+      <a class="mini-topnav-back" href="../../hub/index.html">← Hub</a>
+      <span class="mini-topnav-title">Freeze Sokoban</span>
+    </nav>
+    <div class="mini-main">
+    <header class="sf-hud" aria-label="Puzzle status">
+      <div class="sf-hud-block">
+        <span class="sf-label">Level</span>
+        <span class="sf-value" id="hudLevel">1</span>
+      </div>
+      <div class="sf-hud-block">
+        <span class="sf-label">Steps / Freezes</span>
+        <span class="sf-value" id="hudSteps">0 / 1</span>
+      </div>
+      <div class="sf-hud-block">
+        <span class="sf-label">Stars / Best</span>
+        <span class="sf-value" id="hudBest">—</span>
+      </div>
+    </header>
+
+    <main class="sf-stage" aria-label="Puzzle board">
+      <p class="sf-hint" id="hintText">Push crates onto goals. Freeze once per level.</p>
+      <div class="sf-grid" id="grid" role="grid" aria-label="Warehouse floor"></div>
+      <p class="sf-feedback" id="feedback" role="status" aria-live="polite"></p>
+    </main>
+    </div>
+
+    <footer class="sf-skill">
+      <div class="sf-dpad">
+        <button type="button" class="sf-btn sf-btn-dir" data-dir="0,-1" aria-label="Push up">↑</button>
+        <div class="sf-dpad-mid">
+          <button type="button" class="sf-btn sf-btn-dir" data-dir="-1,0" aria-label="Push left">←</button>
+          <button type="button" class="sf-btn sf-btn-dir" data-dir="1,0" aria-label="Push right">→</button>
+        </div>
+        <button type="button" class="sf-btn sf-btn-dir" data-dir="0,1" aria-label="Push down">↓</button>
+      </div>
+      <div class="sf-actions">
+        <button type="button" class="sf-btn sf-btn-secondary" id="btnUndo">Undo</button>
+        <button type="button" class="sf-btn sf-btn-secondary" id="btnFreeze">Freeze</button>
+        <button type="button" class="sf-btn sf-btn-secondary" id="btnReset">Reset level</button>
+      </div>
+      <div class="sf-level-nav">
+        <button type="button" class="sf-btn sf-btn-secondary" id="btnPrevLevel">Prev level</button>
+        <button type="button" class="sf-btn sf-btn-secondary" id="btnNextLevel">Next level</button>
+      </div>
+    </footer>
+
+    <div class="sf-result hidden" id="resultPanel" aria-hidden="true">
+      <p class="sf-result-title" id="resultTitle">Level clear</p>
+      <p class="sf-result-detail" id="resultDetail"></p>
+      <button type="button" class="sf-btn sf-btn-primary sf-btn-retry" id="btnRetry">Next level</button>
+      <a class="sf-hub-link" href="../../hub/index.html">Back to Hub</a>
+    </div>
+
+    <div class="sf-tutorial" id="tutorial">
+      <div class="sf-tutorial-card">
+        <h1>Freeze Sokoban</h1>
+        <p>Push <strong>$</strong> crates onto <strong>.</strong> goals. Each level allows one <strong>Freeze</strong>: pick a direction to lock an adjacent <strong>%</strong> block into a wall.</p>
+        <button type="button" class="sf-btn sf-btn-primary" id="btnSkipTutorial">Skip Tutorial</button>
+      </div>
+    </div>
+  </div>
+  <script src="../../theme/mini_topnav.js" defer></script>
+  <script src="game.js" defer></script>
+</body>
+</html>
